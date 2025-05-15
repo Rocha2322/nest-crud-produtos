@@ -1,0 +1,13 @@
+// src/produtos/dto/create-produto.dto.ts
+import { ApiProperty } from '@nestjs/swagger';
+
+export class CreateProdutoDto {
+  @ApiProperty({ example: 'Notebook Gamer' })
+  nome: string;
+
+  @ApiProperty({ example: 3500 })
+  preco: number;
+
+  @ApiProperty({ example: 1, description: 'ID da categoria do produto' })
+  categoriaId: number;
+}
